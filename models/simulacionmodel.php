@@ -28,13 +28,11 @@
                         foreach($dato as $value)
                         {
                             $query->execute(['numeroDeCouta' => $value['numeroDeCouta'], 'montoCapital' => $value['montoCapital'], 'montoInteres' => $value['montoInteres'], 'saldoInsolutoCredito' => $value['saldoInsolutoCredito']]);
-                            //echo $item .":". $value['numeroDeCouta'] ."  ". $item .":". $value['montoCapital'] ."  ". $item .":". $value['montoInteres'] ."  ". $item .":". $value['saldoInsolutoCredito'];
                         }
                     }
                 return true;
             }catch(PDOException $e){
                 echo $e->getMessage();
-                //echo "Ya existe esa matrícula";
                 return false;
             }
             
