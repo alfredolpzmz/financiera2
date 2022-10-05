@@ -1,4 +1,6 @@
 <?php
+    header("Content-Type: application/json");
+
     class SimulacionModel extends Model{
 
         public function __construct(){
